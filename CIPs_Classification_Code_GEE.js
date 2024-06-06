@@ -83,8 +83,8 @@ var dataset = image.addBands(ndvi).addBands(mndwi).addBands(ndbi).addBands(savi)
 // Create 2000 random points in the region.
 var CIPs = ee.FeatureCollection("projects/Chemical");
 var other = ee.FeatureCollection("projects/No");
-var randomCIPs = ee.FeatureCollection.randomPoints(CIPs,1000,0);
-var randomPointsother = ee.FeatureCollection.randomPoints(other,1000,0);
+var randomCIPs = ee.FeatureCollection.randomPoints(CIPs,3000,0);
+var randomPointsother = ee.FeatureCollection.randomPoints(other,3000,0);
 
 var addproperty0 = function(feature) {
   return feature.set('landcover',0);
